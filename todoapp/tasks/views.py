@@ -23,3 +23,10 @@ def index(request):
                 }
 
     return render(request, 'tasks/task_list.html', context)
+
+
+def delete_task(request, task_id):
+    task_to_delete = Task.objects.get(id=task_id )
+    task_to_delete.delete()
+
+    return redirect('/')
