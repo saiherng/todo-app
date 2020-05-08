@@ -14,16 +14,15 @@
   <body>
     <h1>This is my To Do App! </h1>
 
-    <form method="POST" action="/">
+    <form method="POST" action="/" >
       {% csrf_token %}
       {{form.task}}
-      <input type="submit" name="Create Task" value="Submit">
+      <input type="submit" name="create task" value="Submit">
     </form>
 
     {% for task in tasks %}
     <div>
       <p># {{task}}</p>
-
     </div>
     {% endfor %}
 
