@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^n=oy#8ndjy5sf0h+0fibkcnwj@fh6svmdg-i4#!r$)61f##yn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sai-todoapp.herokuapp.com', 'localhost']
 
 
 # Application definition
