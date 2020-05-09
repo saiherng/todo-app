@@ -1,4 +1,6 @@
-asgiref==3.2.7
-Django==3.0.6
-pytz==2020.1
-sqlparse==0.3.1
+appdirs==1.4.3
+distlib==0.3.0
+filelock==3.0.12
+six==1.14.0
+virtualenv==20.0.20
+virtualenvwrapper-win==1.2.6

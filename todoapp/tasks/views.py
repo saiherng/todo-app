@@ -30,3 +30,9 @@ def delete_task(request, task_id):
     task_to_delete.delete()
 
     return redirect('/')
+
+def edit_task(request, task_id):
+
+    #task_to_edit = Task.objects.get(id=task_id)
+
+    pass
