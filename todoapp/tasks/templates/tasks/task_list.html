@@ -13,7 +13,7 @@
   </head>
   <body>
 
-    <h1>This is my To Do App! </h1>
+    <h1>To Do App!</h1>
     <br>
     <form method="POST" action="/" >
       {% csrf_token %}
@@ -21,20 +21,18 @@
       <input type="submit" value="Add Task">
     </form>
 
-
-    <ul>
-      {% for task in tasks %}
-        <li>{{ task.task }}
-          <form action="/deleteTask/{{task.id}}/"
-                method="post"
-                style="display: inline;">
-            {% csrf_token %}
-          <input type="submit" value="Delete">
-        </form>
-
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="list-group">
+        {% for task in tasks %}
+    <a class="list-group-item"> {{ task.task }}
+      <form action="/deleteTask/{{task.id}}/"
+              method="post"
+              style="display: inline;">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+      </form>
+    </a>
+    {% endfor %}
+    </div>
 
 
     <!-- Optional JavaScript -->
